@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Edgar",
+    "food": "soup",
+    "link":"https://www.allrecipes.com/recipes/16369/soups-stews-and-chili/soup/"
+  },
+  {
+    "name": "Greg",
+    "food": "salad",
+    "link":"https://www.eatingwell.com/gallery/7999598/best-salad-recipes/"
+  },
+  {
+    "name":"Jerold",
+    "food": "super-salad",
+    "link":"https://thetipsyhousewife.org/2022/02/17/super-salad/"
+  }
+]

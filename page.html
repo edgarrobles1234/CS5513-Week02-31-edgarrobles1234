@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Import </title>
+  
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin>
+  </script> 
+  <script src="https://unpkg.com/@babel/standalone@7.22.10/babel.min.js"></script>
+  
+</head>
+<body>
+  <h1>Would you like soup or salad?</h1>
+  <div id="application">
+    <script type= "text/babel">
+      "use strict";
+
+      function ProjList(props) {
+        console.log(props);
+        return (
+          <div>
+            <ol>
+              {
+                props.list.map(
+                  (person,location) => (
+                    <li key={location}>
+                      <a href={person.link}>{person.name + " wants a " + person.food}</a>
+                    </li>
+                  )
+                )
+              }
+            </ol>
+          </div>
+            
+        );
+      }
+      $.getJSON(
+        'soup',
+        function(jsonFile) {
+          const root = ReactDOM.createRoot(document.getElementById('application'));
+          root.render(
+            <ProjList list={jsonFile}/>
+          )
+        }
+      );
+    </script>
+    
+  </div>
+</body>
+</html>
